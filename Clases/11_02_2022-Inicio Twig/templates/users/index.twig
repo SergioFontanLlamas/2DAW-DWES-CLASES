@@ -1,0 +1,23 @@
+{# Enlazar este fichero con la plantilla correspondiente #}
+{% extends "plantilla.twig" %}
+
+{% block title %}Index{% endblock %}
+
+{% block content %}
+    <a href="#" class="btn btn-primary">Create</a>
+    
+    {# Condicionales #}
+    {% if mensaje %}
+        <p>{{ mensaje }}</p>  
+    {% else %}
+        <p>NO EXISTE LA VARIABLE MENSAJE</p>
+    {% endif %}
+    
+    <p>{{ alumno }}</p>
+    <p>{{ numero }}</p>
+
+    {# Bucle en Twig #}
+     {% for d in dias %}
+        <p>{{ d }}</p>
+    {% endfor %}
+{% endblock %}
