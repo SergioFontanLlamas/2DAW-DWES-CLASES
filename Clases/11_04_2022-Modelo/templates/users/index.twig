@@ -1,0 +1,31 @@
+{# Enlazar este fichero con la plantilla correspondiente #}
+{% extends "plantilla.twig" %}
+
+{% block title %}Index{% endblock %}
+
+{% block content %}
+    <a href="create.php" class="btn btn-primary">Create</a>
+    
+    <table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellidos</th>
+            <th scope="col">Email</th>
+        </tr>
+    </thead>
+    <tbody>
+    {# Bucle en Twig #}
+        {% for u in users %}
+        <tr>
+            <th scope="row">{{ u.id }}</th>
+            <td>{{ u.nombre }}</td>
+            <td>{{ u.apellidos }}</td>
+            <td>{{ u.email }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+    
+{% endblock %}
