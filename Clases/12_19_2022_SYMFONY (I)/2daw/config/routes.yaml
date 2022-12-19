@@ -1,0 +1,12 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+
+categoria_index:
+   path: /categoria/index
+   controller: App\Controller\CategoriaController::index
+
+categoria_show:
+   path: /categoria/show/{id}
+   controller: App\Controller\CategoriaController::show

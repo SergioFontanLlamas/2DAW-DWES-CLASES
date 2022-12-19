@@ -1,0 +1,50 @@
+Users:
+    type: entity
+    table: users
+    uniqueConstraints:
+        DNI:
+            columns:
+                - DNI
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        nombre:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+        apellidos:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+        email:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+        password:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+                default: '1234'
+        dni:
+            type: string
+            nullable: true
+            length: 8
+            options:
+                fixed: false
+            column: DNI
+    lifecycleCallbacks: {  }
