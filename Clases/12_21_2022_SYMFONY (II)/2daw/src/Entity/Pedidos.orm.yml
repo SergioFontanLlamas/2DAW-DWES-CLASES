@@ -1,0 +1,23 @@
+Pedidos:
+    type: entity
+    table: pedidos
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        usuarioId:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: usuario_id
+        fecha:
+            type: date
+            nullable: false
+    lifecycleCallbacks: {  }

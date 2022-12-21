@@ -1,0 +1,32 @@
+PedidosHasProductos:
+    type: entity
+    table: pedidos_has_productos
+    id:
+        pedidoId:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: pedido_id
+        productoId:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: producto_id
+    fields:
+        unidades:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+        precio:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            options:
+                default: '0'
+    lifecycleCallbacks: {  }

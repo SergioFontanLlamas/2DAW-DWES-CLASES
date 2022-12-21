@@ -1,0 +1,33 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+
+categoria_index:
+   path: /categoria/index
+   controller: App\Controller\CategoriaController::index
+
+categoria_show:
+   path: /categoria/show/{id}
+   controller: App\Controller\CategoriaController::show
+
+categoria_create:
+   path: /categoria/create
+   controller: App\Controller\CategoriaController::create
+
+categoria_save:
+   path: /categoria/save
+   controller: App\Controller\CategoriaController::save
+   methods: [POST]
+
+categoria_edit:
+   path: /categoria/edit/{id}
+   controller: App\Controller\CategoriaController::edit
+
+categoria_update:
+   path: /categoria/update
+   controller: App\Controller\CategoriaController::update
+
+categoria_destroy:
+   path: /categoria/destroy/{id}
+   controller: App\Controller\CategoriaController::destroy
